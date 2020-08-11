@@ -1,0 +1,28 @@
+We selected three datasets, LSA16 \cite{Ronchetti2016}, RWTH-PHOENIX-Weather (RWTH) \cite{koller16:deephand} and CIARP \cite{ciarp2018}, because they contain images whose setting varies greatly, have been evaluated already, and possess different quantities of examples or distributions of samples per class.
+
+\subsection{LSA16} LSA16 \cite{Ronchetti2016} contains images of 16 handshapes of the Argentinian Sign Language (LSA), each performed 5 times by 10 different subjects, for a total of 800 images of size 32x32. The subjects wore colored hand gloves and dark clothes on a white background. The dataset is balanced, with 50 images per class. There is only one hand in each image. The hands are centered and segmented from the background.
+
+\subsection{RWTH} RWTH \cite{koller16:deephand} is composed of a selection of  han images of size 132x92 cropped from  videos of the sign language interpreters at the German public tv-station PHOENIX. There are a total of 45 different hand signs. The interpreters wore dark clothes in front of an artificial grey background. Many images posses significant movement blur, others contain both hands of the interpreter and hands are not always perfectly centered.
+
+The dataset is highly imbalanced with some classes having just 1 sample while others have as many as 529 samples. We removed classes that had less than 40 samples following \cite{quiroga2017study}, to guarantee a minimum amount of images per class for the networks to learn.
+
+\subsection{CIARP} CIARP \cite{ciarp2018} contains 6000 images of size 38x38 acquired by a single color camera. The images were manually labeled and correspond to 10 classes of hand gestures. The hands are centered and were segmented from the background, which was replaced by black pixels. The small size of the images and low amount of classes give this dataset lower complexity compared to LSA16 and RWTH. The classes in the data set correspond to handshapes which are not based on sign language, but are similar enough  so that the comparison remains valid.
+
+\begin{figure}[!ht]
+    \centering
+    \begin{tabular}{ccccc}
+        \includegraphics[height=4em,width=13.5mm]{datasets/lsa161.png} &
+        \includegraphics[height=4em,width=13.5mm]{datasets/lsa162.png} &
+        \includegraphics[height=4em,width=13.5mm]{datasets/lsa163.png} &
+        \includegraphics[height=4em,width=13.5mm]{datasets/lsa164.png} &
+        \includegraphics[height=4em,width=13.5mm]{datasets/lsa165.png} \\
+        \multicolumn{5}{c}{\includegraphics[width=23em]{datasets/rwth2.png}} \\
+        \includegraphics[height=4em,width=13.5mm]{datasets/ciarp1.png} &
+        \includegraphics[height=4em,width=13.5mm]{datasets/ciarp5.png} &
+        \includegraphics[height=4em,width=13.5mm]{datasets/ciarp3.png} &
+        \includegraphics[height=4.01em,width=13.5mm]{datasets/ciarp4.png} &
+        \includegraphics[height=4em,width=13.5mm]{datasets/ciarp5.png} \\
+    \end{tabular}
+    \caption{Sample images from the LSA16 (first row), RWTH-PHOENIX-Weather (second row) and CIARP (third row) datasets.}
+    \label{fig:datasets}
+\end{figure}

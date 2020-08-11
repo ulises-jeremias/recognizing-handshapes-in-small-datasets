@@ -1,0 +1,113 @@
+\subsection{Results} \label{sec:appendix:results}
+
+In this section there are tables that group the total results obtained in carrying out the experiments described in section \ref{sec:experiments}.
+
+\begin{table}[h!]
+\makebox[1 \textwidth][c]{       %centering table
+\resizebox{1.4 \textwidth}{!}{   %resize table
+\centering
+\begin{tabular}{ p{9em} p{7em} p{7em} p{7em} p{7em} p{7em} p{7em} p{7em} p{7em} }
+\toprule
+\emph{Method} & \emph{5 samples} & \emph{10 samples} &  \emph{15 samples} & \emph{20 samples} & \emph{30 samples} & \emph{40 samples} & \emph{100 samples} & \emph{360 samples} \\ \midrule
+
+DenseNet           &   10.00 $\pm$ 0.00  &   10.00 $\pm$ 0.00  &   37.26 $\pm$ 36.81 &   76.07 $\pm$ 37.87 &   82.71 $\pm$ 38.35 &   99.83 $\pm$ 0.28  &   99.95 $\pm$ 0.04  &   \textbf{99.83 $\pm$ 0.24}  \\
+MAML               &   11.12 $\pm$ 2.24  &   26.53 $\pm$ 33.07 &   80.23 $\pm$ 35.13 &   98.85 $\pm$ 0.99  &   99.71 $\pm$ 0.15  &   99.56 $\pm$ 0.34  &   99.94 $\pm$ 0.04  &   99.01 $\pm$ 0.66  \\ \\
+
+\rowcolor{black!65} \multicolumn{9}{l}{\color{white}CIFAR10} \\
+MAML               &   10.47 $\pm$ 0.94  &   10.00 $\pm$ 0.00  &   95.51 $\pm$ 2.15  &   98.41 $\pm$ 1.16  &   \textbf{99.73 $\pm$ 0.30}  &   98.92 $\pm$ 1.72  &   99.96 $\pm$ 0.02  &   99.44 $\pm$ 0.38  \\
+Transfer Learning  &   11.69 $\pm$ 3.39  &   27.24 $\pm$ 33.54 &   98.44 $\pm$ 0.47  &   98.71 $\pm$ 0.72  &   99.61 $\pm$ 0.21  &   99.64 $\pm$ 0.31  &   99.92 $\pm$ 0.05  &   99.59 $\pm$ 0.19  \\ \\
+
+\rowcolor{black!65} \multicolumn{9}{l}{\color{white}MNIST} \\
+MAML               &   10.00 $\pm$ 0.00  &   12.70 $\pm$ 3.27  &   80.13 $\pm$ 35.07 &   98.91 $\pm$ 0.47  &   99.64 $\pm$ 0.16  &   \textbf{99.74 $\pm$ 0.16}  &   \textbf{99.97 $\pm$ 0.04}  &   99.43 $\pm$ 0.64  \\
+Transfer Learning  &   10.00 $\pm$ 0.00  &   10.00 $\pm$ 0.00  &   97.31 $\pm$ 1.36  &   \textbf{99.25 $\pm$ 0.37}  &   99.30 $\pm$ 0.48  &   99.70 $\pm$ 0.31  &   99.95 $\pm$ 0.04  &   99.21 $\pm$ 0.51  \\ \\
+
+\rowcolor{black!65} \multicolumn{9}{l}{\color{white}LSA16} \\
+MAML               &   11.38 $\pm$ 2.65  &   11.44 $\pm$ 2.49  &   80.10 $\pm$ 35.07 &   98.95 $\pm$ 0.64  &   99.51 $\pm$ 0.45  &   99.50 $\pm$ 0.62  &   99.93 $\pm$ 0.08  &   99.30 $\pm$ 0.61  \\
+Transfer Learning  &   11.19 $\pm$ 2.38  &   10.01 $\pm$ 0.02  &   97.82 $\pm$ 0.93  &   99.07 $\pm$ 0.45  &   99.51 $\pm$ 0.24  &   99.73 $\pm$ 0.33  &   99.93 $\pm$ 0.06  &   99.73 $\pm$ 0.26  \\ \\
+
+\rowcolor{black!65} \multicolumn{9}{l}{\color{white}RWTH} \\
+MAML               &   10.00 $\pm$ 0.00  &   10.00 $\pm$ 0.00  &   97.75 $\pm$ 0.52  &   99.07 $\pm$ 0.63  &   99.64 $\pm$ 0.18  &   99.65 $\pm$ 0.17  &   99.97 $\pm$ 0.02  &   99.08 $\pm$ 0.73  \\
+Transfer Learning  &   10.24 $\pm$ 0.49  &   10.03 $\pm$ 0.04  &   \textbf{98.59 $\pm$ 0.83}  &   98.33 $\pm$ 1.16  &   99.58 $\pm$ 0.20  &   99.74 $\pm$ 0.16  &   99.85 $\pm$ 0.09  &   99.42 $\pm$ 0.40  \\ \\
+
+ProtoNet           &   \textbf{91.45 $\pm$ 2.44}  &   \textbf{94.48 $\pm$ 1.78}  &   95.70 $\pm$ 0.66  &   97.63 $\pm$ 0.68  &   98.38 $\pm$ 0.27  &   99.21 $\pm$ 0.28  &   99.82 $\pm$ 0.05  &   99.41 $\pm$ 0.16  \\
+
+\bottomrule
+\end{tabular}
+} %close resize
+} %close centering
+\caption{Accuracy of various convolutional neural network based models on Ciarp. The results of the experiments using MAML and transfer learning are grouped according to the dataset with which the pretrained model is created. \label{tab:results:ciarp}}
+\end{table}
+
+
+\begin{table}[h!]
+\makebox[1 \textwidth][c]{       %centering table
+\resizebox{1.4 \textwidth}{!}{   %resize table
+\centering
+\begin{tabular}{ p{9em} p{7em} p{7em} p{7em} p{7em} p{7em} }
+\toprule
+\emph{Method} & \emph{5 samples} & \emph{10 samples} &  \emph{15 samples} & \emph{20 samples} & \emph{30 samples}   \\ \midrule
+
+DenseNet           &    6.56 $\pm$ 0.63  &   92.80 $\pm$ 2.89  &   92.81 $\pm$ 2.82  &   95.31 $\pm$ 1.23  &   96.13 $\pm$ 0.00   \\
+MAML               &    6.35 $\pm$ 0.20  &   93.95 $\pm$ 1.53  &   93.54 $\pm$ 1.60  &   95.72 $\pm$ 1.00  &   97.81 $\pm$ 0.38   \\ \\
+
+\rowcolor{black!65} \multicolumn{6}{l}{\color{white}CIFAR10} \\
+MAML               &    6.25 $\pm$ 0.00  &   92.18 $\pm$ 1.47  &   94.06 $\pm$ 1.76  &   95.63 $\pm$ 2.60  &   97.08 $\pm$ 0.77   \\
+Transfer Learning  &    6.25 $\pm$ 0.00  &   92.91 $\pm$ 2.66  &   93.75 $\pm$ 2.30  &   94.79 $\pm$ 1.14  &   97.91 $\pm$ 0.46   \\ \\
+
+\rowcolor{black!65} \multicolumn{6}{l}{\color{white}MNIST} \\
+MAML               &    6.45 $\pm$ 0.41  &   92.91 $\pm$ 0.96  &   94.17 $\pm$ 2.45  &   95.63 $\pm$ 1.16  &   97.18 $\pm$ 0.41   \\
+Transfer Learning  &    6.25 $\pm$ 0.00  &   92.60 $\pm$ 2.07  &   93.43 $\pm$ 1.73  &   95.41 $\pm$ 2.42  &   97.08 $\pm$ 0.62   \\ \\
+
+\rowcolor{black!65} \multicolumn{6}{l}{\color{white}CIARP} \\
+MAML               &    6.77 $\pm$ 0.65  &   92.08 $\pm$ 2.51  &   94.58 $\pm$ 1.16  &   96.14 $\pm$ 1.34  &   96.97 $\pm$ 1.25   \\
+Transfer Learning  &    6.25 $\pm$ 0.00  &   92.70 $\pm$ 1.77  &   92.60 $\pm$ 1.87  &   96.67 $\pm$ 1.12  &   96.24 $\pm$ 1.48   \\ \\
+
+\rowcolor{black!65} \multicolumn{6}{l}{\color{white}RWTH} \\
+MAML               &    6.87 $\pm$ 0.76  &   92.81 $\pm$ 0.51  &   94.47 $\pm$ 2.29  &   94.37 $\pm$ 2.58  &   96.24 $\pm$ 1.00   \\
+Transfer Learning  &    6.97 $\pm$ 1.45  &   74.79 $\pm$ 34.27 &   93.43 $\pm$ 2.56  &   95.62 $\pm$ 1.21  &   96.97 $\pm$ 0.89   \\ \\
+
+ProtoNet           &   \textbf{94.15 $\pm$ 1.27}  &   \textbf{94.64 $\pm$ 1.23}  &   \textbf{95.50 $\pm$ 1.01}  &   \textbf{97.20 $\pm$ 0.74}  &   \textbf{98.38 $\pm$ 0.22}   \\
+
+\bottomrule
+\end{tabular}
+} %close resize
+} %close centering
+\caption{Accuracy of various convolutional neural network based models on LSA16. The results of the experiments using MAML and transfer learning are grouped according to the dataset with which the pretrained model is created. \label{tab:results:lsa16}}
+\end{table}
+
+
+\begin{table}[h!]
+\makebox[1 \textwidth][c]{       %centering table
+\resizebox{1.4 \textwidth}{!}{   %resize table
+\centering
+\begin{tabular}{ p{9em} p{7em} p{7em} p{7em} p{7em} p{7em} p{7em} p{7em} }
+\toprule
+\emph{Method}   & \emph{5 samples}    & \emph{10 samples}   &  \emph{15 samples}  & \emph{20 samples}   & \emph{30 samples}   & \emph{40 samples}   & \emph{Full RWTH} \\ \midrule
+
+DenseNet           &   10.32 $\pm$ 2.48  &   17.78 $\pm$ 17.08 &   46.66 $\pm$ 19.17 &   \textbf{64.59 $\pm$ 3.81}  &   \textbf{71.20 $\pm$ 2.24}  &   \textbf{71.85 $\pm$ 3.84}  &   \textbf{96.05 $\pm$ 0.96}   \\
+MAML               &    9.20 $\pm$ 1.97  &    9.86 $\pm$ 1.29  &   25.38 $\pm$ 19.31 &   30.51 $\pm$ 24.03 &   67.81 $\pm$ 1.99  &   67.13 $\pm$ 1.55  &   95.54 $\pm$ 1.21   \\ \\
+
+\rowcolor{black!65} \multicolumn{8}{l}{\color{white}CIFAR10} \\
+MAML               &    8.36 $\pm$ 0.62  &    9.69 $\pm$ 1.94  &    8.66 $\pm$ 1.75  &   38.90 $\pm$ 24.40 &   64.56 $\pm$ 7.86  &   64.53 $\pm$ 3.18  &   96.08 $\pm$ 0.37   \\
+Transfer Learning  &   10.73 $\pm$ 1.59  &   17.78 $\pm$ 17.21 &   18.25 $\pm$ 16.33 &   48.19 $\pm$ 21.08 &   65.76 $\pm$ 6.50  &   66.28 $\pm$ 4.67  &   95.29 $\pm$ 1.22   \\ \\
+
+\rowcolor{black!65} \multicolumn{8}{l}{\color{white}MNIST} \\
+MAML               &    9.80 $\pm$ 1.27  &    9.80 $\pm$ 2.03  &   28.33 $\pm$ 21.66 &   51.12 $\pm$ 21.42 &   66.93 $\pm$ 3.13  &   69.07 $\pm$ 4.66  &   95.73 $\pm$ 0.56   \\
+Transfer Learning  &    9.89 $\pm$ 1.49  &   17.32 $\pm$ 15.89 &   21.12 $\pm$ 18.70 &   37.13 $\pm$ 24.93 &   64.91 $\pm$ 3.54  &   63.66 $\pm$ 3.86  &   96.16 $\pm$ 0.58   \\ \\
+
+\rowcolor{black!65} \multicolumn{8}{l}{\color{white}CIARP} \\
+MAML               &    9.83 $\pm$ 2.80  &   17.59 $\pm$ 16.62 &   19.15 $\pm$ 18.97 &   38.57 $\pm$ 23.35 &   66.50 $\pm$ 3.05  &   66.36 $\pm$ 3.02  &   96.00 $\pm$ 0.35   \\
+Transfer Learning  &    9.31 $\pm$ 1.90  &   18.30 $\pm$ 16.49 &   25.79 $\pm$ 21.30 &   39.07 $\pm$ 24.93 &   64.26 $\pm$ 5.42  &   66.69 $\pm$ 3.15  &   95.57 $\pm$ 1.06   \\ \\
+
+\rowcolor{black!65} \multicolumn{8}{l}{\color{white}LSA16} \\
+MAML               &   10.98 $\pm$ 3.66  &   15.16 $\pm$ 11.85 &   28.57 $\pm$ 23.10 &   46.96 $\pm$ 19.03 &   67.18 $\pm$ 4.49  &   64.42 $\pm$ 3.58  &   95.48 $\pm$ 1.29   \\
+Transfer Learning  &    8.33 $\pm$ 0.00  &   17.15 $\pm$ 15.69 &   28.93 $\pm$ 24.06 &   46.22 $\pm$ 20.08 &   66.58 $\pm$ 5.00  &   62.89 $\pm$ 10.14 &   95.48 $\pm$ 0.30   \\ \\
+
+ProtoNet           &   \textbf{48.93 $\pm$ 3.02}  &   \textbf{48.53 $\pm$ 1.59}  &   \textbf{48.87 $\pm$ 1.60}  &   46.73 $\pm$ 1.14  &   47.58 $\pm$ 1.33  &   50.36 $\pm$ 6.82  &   47.09 $\pm$ 0.10   \\
+
+\bottomrule
+\end{tabular}
+} %close resize
+} %close centering
+\caption{Accuracy of various convolutional neural network based models on RWTH. The results of the experiments using MAML and transfer learning are grouped according to the dataset with which the pretrained model is created. \label{tab:results:rwth}. Full RWTH column corresponds to an unbalanced set of RWTH. For this, models were trained using weight classes.}
+\end{table}
